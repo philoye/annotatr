@@ -1,13 +1,12 @@
 #pp_options {
-	position: absolute;
-	top: 0;
-	right: 0;
+  float: left;
 	padding: 5px;
 	font-size: 12px;
 	line-height: 1;
 	background: #f0f0f0;
-	border-left: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	font: 11px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  background-color: #ffc;
+  border-left: 1px solid #ccc;
 }
 #pp_options ul {
 	margin: 0;
@@ -19,7 +18,14 @@
 }
 #pp_options li a {
 	color: #bbb;
+  font-weight: normal;
+  outline: 0;
 }
 #pp_options li a.active {
 	color: #000;
+  font-weight: bold;
+}
+#pp_options li.instructions {
+  font-weight: bold;
+  color: #666;
 }
