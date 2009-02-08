@@ -12,20 +12,19 @@
 
   <script type="text/javascript" charset="utf-8" src="lib/js/jquery.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/js/jquery.cookie.js"></script>
-  <script type="text/javascript" charset="utf-8" src="lib/js/jquery.polypage.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/js/jquery.annotate.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/js/jquery.polypage.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/js/wireframe.js"></script>
 </head>
 <body>
-  <div id="page">
-
+  <div id="page" class="annotate" title="An annotation">
     <ul>
       <li class="annotate" title="this is an <strong>annotation</strong>">No Class</li>
-      <li class="test_class pp_logged_in">pp_logged_in</li>
-      <li class="pp_not_logged_in other_test_class">pp_not_logged_in</li>
-      <li class="test_class pp_logged_in_or_is_admin other_test_class">pp_logged_in_or_admin</li>
-      <li class="pp_logged_in_and_is_admin">pp_logged_in_and_admin</li>
-      <li class="pp_not_logged_in_and_not_is_admin">pp_not_logged_in_and_not_admin</li>
+      <li class="annotate test_class pp_logged_in" title="yet another annotation">pp_logged_in</li>
+      <li class="annotate pp_not_logged_in other_test_class" title="An annotation">pp_not_logged_in</li>
+      <li class="annotate test_class pp_logged_in_or_is_admin other_test_class" title="An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. ">pp_logged_in_or_admin</li>
+      <li class="annotate pp_logged_in_and_is_admin" title="An annotation!">pp_logged_in_and_admin</li>
+      <li class="annotate pp_not_logged_in_and_not_is_admin" title="Another annotation">pp_not_logged_in_and_not_admin</li>
     </ul>
   </div>
 </body>
