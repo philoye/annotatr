@@ -85,7 +85,7 @@
 #annotatr_specification_pageinfo {
   width: 45%;
   float: left;
-  margin: 10px 2.5%;
+  margin: 0px 2.5%;
 }
 #annotatr_specification_pageinfo h6, #annotatr_specification_pageinfo p{
 	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
@@ -112,7 +112,7 @@
   border-collapse: collapse;  
   border-top: 1px solid #999;
 	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  margin: 10px 2.5%;
+  margin: 0px 2.5%;
 }
 #annotatr_specification_table th {
   border-bottom: 1px solid #999;
