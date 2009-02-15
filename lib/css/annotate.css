@@ -1,20 +1,22 @@
-.annotation {
+.annotatr_annotation {
   position: absolute;
   top: 0px;
   left: 0px;
   display: none;
 }
-.annotation-callout {
+.annotatr_callout {
   bottom: -10px;
   left: -10px;
   padding: 1px 5px;
-  background-color: #000;
+  background-color: #f00;
   color: #fff;
   text-align: center;
+  font-weight: bold;
   z-index: 1000;
   border: 1px solid #fff;
+  font-size: 10px;
 }
-.annotation-text {
+.annotatr_text {
   display: none;
   position: absolute;
   top: 15px;
@@ -41,7 +43,7 @@
 	background: #ffc;
 	border-top: 1px solid #ddd;
 }
-#annotation_controls {
+#annotatr_controls {
   float: left;
   margin-left: 25px;
 	padding: 5px;
@@ -52,40 +54,49 @@
   background-color: #ffc;
   border-left: 1px solid #ccc;
 } 
-#annotation_controls ul {
+#annotatr_controls ul {
 	margin: 0;
 	padding: 0;
 }
-#annotation_controls li {
+#annotatr_controls li {
 	display: inline;
 	padding: 0 .3em;
 }
-#annotation_controls li a {
+#annotatr_controls li a {
 	color: #333;
 }
-#annotation_controls li a.active {
+#annotatr_controls li a.active {
 	color: #000;
 }
-#annotation_controls li.instructions {
+#annotatr_controls li.instructions {
   font-weight: bold;
   color: #666;
 }
 
 
-#page-spec {
+#annotatr_pageinfo {
+  margin:0;
+  border-top: 3px solid #ddd;
+  border-bottom: 3px solid #ddd;
+  background-color: #eee;
+  padding: 10px 20px;
+	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+}
+
+
+#annotatr_spec {
   width: 50%;
   border-collapse: collapse;  
   border-top: 1px solid #999;
 	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   margin: 75px auto 0;
 }
-#page-spec th {
-  width: 50px;
+#annotatr_spec th {
   border-bottom: 1px solid #999;
   padding: 4px;
   vertical-align: top;
 }
-#page-spec td {
+#annotatr_spec td {
   border-bottom: 1px solid #999;
   padding: 4px;
   vertical-align: top;
