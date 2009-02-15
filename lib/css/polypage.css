@@ -6,7 +6,7 @@
 	background: #f0f0f0;
 	font: 11px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   background-color: #ffc;
-  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 #pp_options ul {
 	margin: 0;
@@ -17,15 +17,20 @@
 	padding: 0 .3em;
 }
 #pp_options li a {
-	color: #bbb;
-  font-weight: normal;
-  outline: 0;
+  padding: 1px 3px;
+	color: #333;
+	font-weight: bold;
+	border: 1px solid #ffc;
+	outline: none;
+	text-decoration: none;
 }
 #pp_options li a.active {
-	color: #000;
-  font-weight: bold;
+	color: #333;
+	background-color: #cc9;
+	border: 1px solid #996;
+	outline: none;
 }
 #pp_options li.instructions {
   font-weight: bold;
-  color: #666;
+  color: #999;
 }

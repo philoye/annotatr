@@ -5,7 +5,7 @@
   display: none;
 }
 .annotatr_callout {
-  bottom: -10px;
+  bottom: 0px;
   left: -10px;
   padding: 1px 5px;
   background-color: #f00;
@@ -27,32 +27,17 @@
   color: #666;
   width: 200px;
   padding: 5px 10px;
-}
-
-
-
-#wireframe-bar {
-	font: 11px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	padding: 0;
-	font-size: 11px;
-	line-height: 1;
-	background: #ffc;
-	border-top: 1px solid #ddd;
+  text-align: left;
 }
 #annotatr_controls {
   float: left;
-  margin-left: 25px;
 	padding: 5px;
 	font-size: 12px;
 	line-height: 1;
 	background: #f0f0f0;
 	font: 11px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   background-color: #ffc;
-  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 } 
 #annotatr_controls ul {
 	margin: 0;
@@ -62,42 +47,80 @@
 	display: inline;
 	padding: 0 .3em;
 }
-#annotatr_controls li a {
-	color: #333;
-}
-#annotatr_controls li a.active {
-	color: #000;
-}
 #annotatr_controls li.instructions {
   font-weight: bold;
-  color: #666;
+  color: #999;
+}
+#annotatr_controls li a {
+  padding: 1px 3px;
+	color: #333;
+	font-weight: bold;
+	border: 1px solid #ffc;
+	outline: none;
+	text-decoration: none;
+}
+#annotatr_controls li a.active {
+	color: #333;
+	background-color: #cc9;
+	border: 1px solid #996;
+	outline: none;
 }
 
-
-#annotatr_pageinfo {
-  margin:0;
-  border-top: 3px solid #ddd;
-  border-bottom: 3px solid #ddd;
-  background-color: #eee;
-  padding: 10px 20px;
-	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+#annotatr_specification {
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  background-color: #efefef;
+  padding: 25px 0px;
+  clear: both;
+  margin: 50px 25px;
+}
+#annotatr_specification:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 
+#annotatr_specification_pageinfo {
+  width: 45%;
+  float: left;
+  margin: 10px 2.5%;
+}
+#annotatr_specification_pageinfo h6, #annotatr_specification_pageinfo p{
+	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  
+}
+#annotatr_specification_pageinfo h6 {
+	font-weight: bold;
+  background: none;
+  border: 0;
+}
+#annotatr_specification_pageinfo p {
+  background: none;
+  border: 0;
+  margin: 0 0 1em 0;
+}
 
-#annotatr_spec {
-  width: 50%;
+#annotatr_specification_table {
+  float: left;
+  width: 45%;
   border-collapse: collapse;  
   border-top: 1px solid #999;
 	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  margin: 75px auto 0;
+  margin: 10px 2.5%;
 }
-#annotatr_spec th {
+#annotatr_specification_table th {
   border-bottom: 1px solid #999;
-  padding: 4px;
+  padding: 4px 4px 4px 0;
   vertical-align: top;
 }
-#annotatr_spec td {
+#annotatr_specification_table td {
   border-bottom: 1px solid #999;
-  padding: 4px;
+  padding: 4px 0 4px 8px;
   vertical-align: top;
 }

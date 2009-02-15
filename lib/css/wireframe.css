@@ -1,3 +1,8 @@
+html,body {
+  margin:0;
+  padding:0;
+}
+
 #page {
 	position: relative;
 	width: 420px;
@@ -5,4 +10,15 @@
 	text-align: justify;
 	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 	}
-
+#wireframe-bar {
+	font: 11px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	font-size: 11px;
+	line-height: 1;
+	background: #ffc;
+	border-top: 1px solid #ddd;
+}
