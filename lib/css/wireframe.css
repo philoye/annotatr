@@ -21,4 +21,5 @@ html,body {
 	line-height: 1;
 	background: #ffc;
 	border-top: 1px solid #ccc;
+	z-index: 1000;
 }
