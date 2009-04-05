@@ -47,11 +47,17 @@
   background-color: #ffc;
   border-right: 1px solid #ccc;
 } 
+
 #annotatr_controls p {
   float: left;
 	margin: 0;
 	padding: 0;
   margin-right: 5px;
+  color: #999;
+}
+.annotatr_notshown {
+  display: inline-block;
+  margin-left: 5px;
   color: #999;
 }
 #annotatr_controls ul {
@@ -95,28 +101,27 @@
 }
 
 #annotatr_specification_pageinfo {
+	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   width: 45%;
   float: left;
   margin: 0px 2.5%;
 }
-#annotatr_specification_pageinfo h6, #annotatr_specification_pageinfo p{
-	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  margin: 0;
+#annotatr_specification_pageinfo dt {
+  float: left;
+  clear: left;
+  width: 25%;
+  font-weight: bold;
+  margin: 0 0 .5em 0;
   padding: 0;
-  background: none;
-  border: 0;
-  
 }
-#annotatr_specification_pageinfo h6 {
-	font-weight: bold;
-  background: none;
-  border: 0;
+#annotatr_specification_pageinfo dd {
+  float: left;
+  width: 75%;
+  margin: 0 0 .5em 0;
+  padding: 0;
 }
-#annotatr_specification_pageinfo p {
-  background: none;
-  border: 0;
-  margin: 0 0 1em 0;
-}
+
+
 
 #annotatr_specification_table {
   float: left;

@@ -41,7 +41,7 @@ body div#pp_options {
   top: inherit;
   right: inherit;
 }
-body #wireframe-bar div#pp_options p {
+body div#pp_options p {
   float: left;
   color: #999;  
   margin: 0;
