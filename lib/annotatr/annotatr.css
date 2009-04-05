@@ -120,7 +120,9 @@
   margin: 0 0 .5em 0;
   padding: 0;
 }
-
+.annotatr_hotspot {
+  background-color: rgba(255,0,0,.3) !important;
+}
 
 
 #annotatr_specification_table {
