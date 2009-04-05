@@ -47,16 +47,21 @@
   background-color: #ffc;
   border-right: 1px solid #ccc;
 } 
+#annotatr_controls p {
+  float: left;
+	margin: 0;
+	padding: 0;
+  margin-right: 5px;
+  color: #999;
+}
 #annotatr_controls ul {
 	margin: 0;
 	padding: 0;
+	float: left;
 }
 #annotatr_controls li {
 	display: inline;
 	padding: 0 .3em;
-}
-#annotatr_controls li.instructions {
-  color: #999;
 }
 #annotatr_controls li a {
   padding: 1px 3px;
