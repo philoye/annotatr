@@ -20,7 +20,7 @@
   background-color: #777;
 }
 .notshown {
-  color: #999;
+  color: #777;
   font-size: 10px;
 }
 .annotatr_text {
@@ -51,12 +51,11 @@
   float: left;
 	margin: 0;
 	padding: 0;
-  margin-right: 5px;
+  margin: 0 5px 0 10px;
   color: #999;
 }
 .annotatr_notshown {
   display: inline-block;
-  margin-left: 5px;
   color: #999;
 }
 #annotatr_controls ul {
@@ -101,52 +100,35 @@
 
 #annotatr_specification_pageinfo {
 	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  width: 45%;
   float: left;
-  margin: 0px 2.5%;
+  width: 33%;
 }
-#annotatr_specification_pageinfo dl {
-  border-top: 1px solid #999;
-  padding: 4px 0;
-  margin: 0;
-  overflow: auto;
-  border-bottom: 1px solid #999;
-}
-
-#annotatr_specification_pageinfo dt {
-  float: left;
-  clear: left;
-  width: 25%;
-  font-weight: bold;
-  margin: 0 0 .5em 0;
-  padding: 0;
-}
-#annotatr_specification_pageinfo dd {
-  float: left;
-  width: 75%;
-  margin: 0 0 .5em 0;
-  padding: 0;
-}
-.annotatr_hotspot {
-  background-color: rgba(255,0,0,.2) !important;
-}
+  #annotatr_specification_pageinfo th, #annotatr_specification_pageinfo td  {
+    text-align: left;
+    padding: 0 1em;
+    vertical-align: top;
+  }
 
 
 #annotatr_specification_table {
   float: left;
-  width: 45%;
+  width: 66%;
   border-collapse: collapse;  
   border-top: 1px solid #999;
 	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  margin: 0px 2.5%;
 }
-#annotatr_specification_table th {
-  border-bottom: 1px solid #999;
-  padding: 4px 4px 4px 0;
-  vertical-align: top;
+  #annotatr_specification_table th {
+    border-bottom: 1px solid #999;
+    padding: 4px 4px 4px 0;
+    vertical-align: top;
+  }
+  #annotatr_specification_table td {
+    border-bottom: 1px solid #999;
+    padding: 4px 0 4px 8px;
+    vertical-align: top;
+  }
+
+.annotatr_hotspot {
+  background-color: rgba(255,0,0,.2) !important;
 }
-#annotatr_specification_table td {
-  border-bottom: 1px solid #999;
-  padding: 4px 0 4px 8px;
-  vertical-align: top;
-}
+

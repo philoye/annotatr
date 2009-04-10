@@ -45,7 +45,7 @@ body div#pp_options p {
   float: left;
   color: #999;  
   margin: 0;
-  padding: 0 5px 0 0;
+  padding: 0 5px 0 5px;
 }
 body div#pp_options ul {
   float: left;
