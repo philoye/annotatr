@@ -16,9 +16,8 @@
   border: 1px solid #fff;
   font-size: 10px;
 }
-.annotatr_callout_hidden {
-  color: #999;
-  background-color: #ccc;
+.annotatr_callout_hidden .annotatr_callout {
+  background-color: #777;
 }
 .notshown {
   color: #999;
