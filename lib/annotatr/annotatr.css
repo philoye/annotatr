@@ -85,7 +85,7 @@
   border-top: 3px solid #ccc;
   border-bottom: 3px solid #ccc;
   background-color: #efefef;
-  padding: 25px 0px;
+  padding: 1em 0px;
   clear: both;
   margin: 50px 25px;
 }
@@ -96,7 +96,14 @@
       clear: both;
       visibility: hidden;
   }
-
+  #annotatr_specification #annotatr_header {
+    margin: 0 1em 1em 1em;
+  	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  	text-transform: uppercase;
+  	font-weight: bold;
+  	color: #666;
+  	
+  }
 #annotatr_specification_pageinfo {
 	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   float: left;
