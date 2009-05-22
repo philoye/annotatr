@@ -1,7 +1,7 @@
 .annotatr_annotation {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   display: none;
 }
 .annotatr_callout {
@@ -46,14 +46,13 @@
   background-color: #ffc;
   border-right: 1px solid #ccc;
 } 
-
-#annotatr_controls p {
-  float: left;
-	margin: 0;
-	padding: 0;
-  margin: 0 5px 0 10px;
-  color: #999;
-}
+  #annotatr_controls p {
+    float: left;
+  	margin: 0;
+  	padding: 0;
+    margin: 0 5px 0 10px;
+    color: #999;
+  }
 .annotatr_notshown {
   display: inline-block;
   color: #999;
@@ -63,24 +62,24 @@
 	padding: 0;
 	float: left;
 }
-#annotatr_controls li {
-	display: inline;
-	padding: 0 .3em;
-}
-#annotatr_controls li a {
-  padding: 1px 3px;
-	color: #333;
-	font-weight: bold;
-	border: 1px solid #ffc;
-	outline: none;
-	text-decoration: none;
-}
-#annotatr_controls li a.active {
-	color: #333;
-	background-color: #cc9;
-	border: 1px solid #996;
-	outline: none;
-}
+  #annotatr_controls li {
+  	display: inline;
+  	padding: 0 .3em;
+  }
+    #annotatr_controls li a {
+      padding: 1px 3px;
+    	color: #333;
+    	font-weight: bold;
+    	border: 1px solid #ffc;
+    	outline: none;
+    	text-decoration: none;
+    }
+      #annotatr_controls li a.active {
+      	color: #333;
+      	background-color: #cc9;
+      	border: 1px solid #996;
+      	outline: none;
+      }
 
 #annotatr_specification {
   border-top: 3px solid #ccc;
@@ -90,13 +89,13 @@
   clear: both;
   margin: 50px 25px;
 }
-#annotatr_specification:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
+  #annotatr_specification:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
 
 #annotatr_specification_pageinfo {
 	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
