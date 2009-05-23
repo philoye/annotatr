@@ -1,0 +1,140 @@
+.annotatr_annotation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.annotatr_callout {
+  bottom: 0px;
+  left: -10px;
+  padding: 1px 5px;
+  background-color: #f00;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1000;
+  border: 1px solid #fff;
+  font-size: 10px;
+}
+.annotatr_callout_hidden .annotatr_callout {
+  background-color: #777;
+}
+.notshown {
+  color: #777;
+  font-size: 10px;
+}
+.annotatr_text {
+  display: none;
+  position: absolute;
+  font-size: 10px;
+  top: 15px;
+  left: 15px;
+  z-index: 100;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  color: #666;
+  width: 250px;
+  padding: 5px 10px;
+  text-align: left;
+}
+#annotatr_controls {
+  float: left;
+	padding: 5px;
+	line-height: 1;
+	background: #f0f0f0;
+	font: 11px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  background-color: #ffc;
+  border-right: 1px solid #ccc;
+} 
+  #annotatr_controls p {
+    float: left;
+  	margin: 0;
+  	padding: 0;
+    margin: 0 5px 0 10px;
+    color: #999;
+  }
+.annotatr_notshown {
+  display: inline-block;
+  color: #999;
+}
+#annotatr_controls ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+  #annotatr_controls li {
+  	display: inline;
+  	padding: 0 .3em;
+  }
+    #annotatr_controls li a {
+      padding: 1px 3px;
+    	color: #333;
+    	font-weight: bold;
+    	border: 1px solid #ffc;
+    	outline: none;
+    	text-decoration: none;
+    }
+      #annotatr_controls li a.active {
+      	color: #333;
+      	background-color: #cc9;
+      	border: 1px solid #996;
+      	outline: none;
+      }
+
+#annotatr_specification {
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  background-color: #efefef;
+  padding: 1em 0px;
+  clear: both;
+  margin: 50px 25px;
+}
+  #annotatr_specification:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+  #annotatr_specification #annotatr_header {
+    margin: 0 1em 1em 1em;
+  	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  	text-transform: uppercase;
+  	font-weight: bold;
+  	color: #666;
+  	
+  }
+#annotatr_specification_pageinfo {
+	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  float: left;
+  width: 33%;
+}
+  #annotatr_specification_pageinfo th, #annotatr_specification_pageinfo td  {
+    text-align: left;
+    padding: 0 1em;
+    vertical-align: top;
+  }
+
+
+#annotatr_specification_table {
+  float: left;
+  width: 66%;
+  border-collapse: collapse;  
+  border-top: 1px solid #999;
+	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+}
+  #annotatr_specification_table th {
+    border-bottom: 1px solid #999;
+    padding: 4px 4px 4px 0;
+    vertical-align: top;
+  }
+  #annotatr_specification_table td {
+    border-bottom: 1px solid #999;
+    padding: 4px 0 4px 8px;
+    vertical-align: top;
+  }
+
+.annotatr_hotspot {
+  background-color: rgba(255,0,0,.2) !important;
+}
+
