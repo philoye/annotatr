@@ -5,19 +5,78 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-	<title>Annotatr</title>
+	<title>Annotatr, a jQuery plugin for annotating HTML wireframes</title>
 
   <meta name="page" content="Home">
-  <meta name="date" content="2009-05-14 11:57:20">
+  <meta name="date" content="2009-05-23 11:57:20">
   <meta name="revision" content="1">
   <meta name="author" content="Phil Oye">
   <meta name="description" content="Annotatr is a jQuery plugin that provides a unobtrusive way to show documentation for HTML wireframes.">
   <meta name="keywords" content="jquery, plugin, ia, information architecture, wireframes, documentation, annotatr, annotations">
 
-	<link rel="stylesheet" href="skins/annotatr.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="skins/basic.css" type="text/css" media="screen, projection">
   <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/cookie.jquery.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/annotatr.jquery.js"></script>
+
+	<style type="text/css" media="screen">
+	
+		body {
+      margin: 0;
+      padding: 0;
+			font: 16px/1.4 normal "Baskerville", "Times New Roman", "Times", serif;
+			line-height: 1.4;
+		}
+
+		h1 {
+			margin: 0;
+			padding: 0;
+      color: #a80000;
+			font-size: 4em;
+      line-height: 1em;
+      font-family: "gill sans", "lucida grande", sans-serif;
+		}
+    p {
+      margin-top: 0;
+    }
+    p.slogan {
+      font-style: italic;
+    }
+		h2 {
+			margin: 2em 0 0 0;
+			padding: 0;
+			font-size: 1em;
+		}
+
+		#container {
+			position: relative;
+			width: 500px;
+			margin: 125px 0 0 135px;
+		}
+		dt {
+		  font-weight: bold;
+		}
+		dd {
+		  margin: 0 0 1em 0;
+		}
+		a {
+		  color: #a80000;
+		}
+		.footer {
+      margin-top: 2em;
+      padding-top: .25em;
+		  color: #777;
+		  font-style: italic;
+      border-top: 1px solid #aaa;
+		}
+		code {
+		  background-color: #ddd;
+		  border: #ccc;
+		  padding: 2px 0;
+		  font-size: 14px;
+		}
+    
+	</style>
   
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
@@ -27,15 +86,42 @@
   
 </head>
 <body>
+  <a href="http://github.com/philoye/annotatr"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub" ></a>
+
   <div id="container">
-    <ul>
-      <li class="annotatr" title="this is an &lt;strong&gt;annotation&lt;/strong&gt;">No <a href="#">Class</a></li>
-      <li class="annotatr test_class" style="display: none" title="yet another annotation, but this element is hidden"><a href="http://www.google.com">pp_logged_in</a></li>
-      <li class="annotatr other_test_class" title="An annotation">pp_not_logged_in</li>
-      <li class="annotatr test_class" title="An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation.">pp_logged_in_or_admin</li>
-      <li class="annotatr" title="An annotation!">pp_logged_in_and_admin</li>
-      <li class="annotatr" title="test">pp_not_logged_in_and_not_admin</li>
-    </ul>
+    <h1 title="And you thought dropping vowels was going out of fashion.">Annotatr</h1>
+    <p class="slogan">A jQuery plugin to help you explain your HTML <span title="Or prototypes, wireframes, or whatever you call them.">mockups</span></p>
+
+  	<h2>What&#39;s this all about?</h2>
+    <p>Annotatr was designed to help document and explain your mockups. The goal is to use simple and standard HTML markup while ensuring the documentation is <em>never</em> confused with the mockup itself.</p>
+    
+    <p>Annotatr provides two distinct pieces of functionality—annotations for additional explanation for particular UI elements and highlights for the parts of the mockup that are actually clickable.<p>
+      
+    <h2>Why annotate our mockups?</h2>
+    <p>While we always strive to create completely usable, intuitive designs, there is always a need to provide extra explanation about the <em>what, how &amp; why</em> behind the design to the people involved.</p>
+
+    <h2>Why callout clickable links?</h2>
+    <p>How many times have you emailed a link to a prototype along with instructions about what works? Well, hopefully no longer. For example, <a href="#">Which</a> <a href="#">one</a> <a href="#">of</a> <a href="#">these</a> <a href="#">links</a> <a href="#">actually</a> <a href="#">works</a>?</p>
+      
+    <h2>Where's the demo?</h2>
+  	<p>You're in luck, this page is using Annotatr. Check out the options in the top right corner of this page. Toggle them to see what happens.</p>
+
+  	<h2>How does it work?</h2>
+    <p>Check out the readme for more details, but basically Annotatr creates callouts for every element that has a <code>title</code> attribute which you use for the annotation text.
+
+    <p>For the clickable items, it looks at all links that have an <code>href</code>, that isn't blank or a <code>#</code>, and adds a background color. This will be extended to find forms with working actions and items with an onclick event.</p>
+
+  	<h2>Where can I get hold of it?</h2>
+  	<p>The latest source code is available on <a href="http://github.com/philoye/annotatr" title="<strong>Git</strong> is a fast, efficient, distributed version control system ideal for the collaborative development of software.<br><br><strong>GitHub</strong> is the easiest (and prettiest) way to participate in that collaboration: fork projects, send pull requests, monitor development, all with ease.">GitHub</a> or you can just download it right <a href="http://github.com/philoye/annotatr/zipball/master">here</a>.</p>
+
+  	<h2>Acknowledgements</h2>
+  	<p>I was inspired to create Annotatr after playing with New Bamboo's <a href="http://code.new-bamboo.co.uk/polypage/">PolyPage</a>, a jQuery plugin that "ease[s] the process of showing multiple page states in HTML mock-ups." I borrowed a lot of ideas of how to structure Annotatr, and for that I owe  thanks.</p>
+
+  	<h2>What&#39;s going to be in the next version?</h2>
+  	<p>I don't know, you tell me. I'm open to suggestions, and most definitely will take patches.</p>
+
+    <p class="footer">Annotatr was written by me, <a href="http://philoye.com">Phil Oye</a>. Follow me on <a href="http://twitter.com/philoye">Twitter</a> or send me an email to <span title="I trust you can work out this super complex encryption I have going here.">philoye [at] philoye [dot] com</span>. Annotatr is licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>. 
+
   </div>
 </body>
 </html>

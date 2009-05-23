@@ -1,20 +1,65 @@
+#annotatr_controls {
+  position: fixed;
+  top: 0;
+  right: 0;
+	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  background-color: #ddd;
+  color: #666;
+  padding: 5px;
+  border-left: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+} 
+  #annotatr_controls p {
+    float: left;
+  	margin: 0;
+  	padding: 0;
+    margin: 0 5px 0 10px;
+    color: #999;
+  }
+  #annotatr_controls ul {
+  	margin: 0;
+  	padding: 0;
+  	float: left;
+  }
+    #annotatr_controls li {
+    	display: inline;
+    	padding: 0 .3em;
+    }
+      #annotatr_controls li a {
+        padding: 1px 3px;
+      	color: #000;
+      	font-weight: bold;
+      	outline: none;
+      	text-decoration: none;
+      }
+        #annotatr_controls li a.active {
+        	color: #fff;
+        	background-color: #00aeef;
+        	outline: none;
+        }
+
+
 .annotatr_annotation {
   position: absolute;
   top: 0;
   left: 0;
   display: none;
 }
+
 .annotatr_callout {
-  bottom: 0px;
-  left: -10px;
+	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  position: absolute;
+  top: 0px;
+  right: 0px;
   padding: 1px 5px;
-  background-color: #f00;
+  background-color: #00aeef;
   color: #fff;
   text-align: center;
   font-weight: bold;
-  z-index: 1000;
+  z-index: 10000;
   border: 1px solid #fff;
   font-size: 10px;
+  line-height: 1;
 }
 .annotatr_callout_hidden .annotatr_callout {
   background-color: #777;
@@ -24,62 +69,23 @@
   font-size: 10px;
 }
 .annotatr_text {
+	font: 12px/1.4 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   display: none;
   position: absolute;
-  font-size: 10px;
-  top: 15px;
-  left: 15px;
+  top: 0px;
+  left: 0px;
   z-index: 100;
   background-color: #eee;
-  border: 1px solid #ccc;
+  border: 1px solid #00aeef;
   color: #666;
-  width: 250px;
+  width: 300px;
   padding: 5px 10px;
   text-align: left;
 }
-#annotatr_controls {
-  float: left;
-	padding: 5px;
-	line-height: 1;
-	background: #f0f0f0;
-	font: 11px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  background-color: #ffc;
-  border-right: 1px solid #ccc;
-} 
-  #annotatr_controls p {
-    float: left;
-  	margin: 0;
-  	padding: 0;
-    margin: 0 5px 0 10px;
-    color: #999;
-  }
 .annotatr_notshown {
   display: inline-block;
   color: #999;
 }
-#annotatr_controls ul {
-	margin: 0;
-	padding: 0;
-	float: left;
-}
-  #annotatr_controls li {
-  	display: inline;
-  	padding: 0 .3em;
-  }
-    #annotatr_controls li a {
-      padding: 1px 3px;
-    	color: #333;
-    	font-weight: bold;
-    	border: 1px solid #ffc;
-    	outline: none;
-    	text-decoration: none;
-    }
-      #annotatr_controls li a.active {
-      	color: #333;
-      	background-color: #cc9;
-      	border: 1px solid #996;
-      	outline: none;
-      }
 
 #annotatr_specification {
   border-top: 3px solid #ccc;
@@ -136,8 +142,11 @@
     padding: 4px 0 4px 8px;
     vertical-align: top;
   }
-
+  #annotatr_specification_table .annotatr_callout {
+    position: static;
+  }
 .annotatr_hotspot {
   background-color: rgba(255,0,0,.2) !important;
+  border: 1px solid red;
 }
 
