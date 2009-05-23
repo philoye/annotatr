@@ -5,34 +5,36 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-	<title>SITE | Home</title>
+	<title>Annotatr</title>
 
-  <meta name="keywords" content="foo,bar,baz">
-  <meta name="Page" content="Home">
-  <meta name="Date" content="2009-02-14 11:57:20">
-  <meta name="Revision" content="1">
-  <meta name="Author" content="Phil Oye, Moment">
-  <meta name="Description" content="This is a description of this page. This is a description of this page. This is a description of this page. ">
+  <meta name="page" content="Home">
+  <meta name="date" content="2009-05-14 11:57:20">
+  <meta name="revision" content="1">
+  <meta name="author" content="Phil Oye">
+  <meta name="description" content="Annotatr is a jQuery plugin that provides a unobtrusive way to show documentation for HTML wireframes.">
+  <meta name="keywords" content="jquery, plugin, ia, information architecture, wireframes, documentation, annotatr, annotations">
 
-	<link rel="stylesheet" href="lib/polypage/skins/plain.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="lib/annotatr/skins/annotatr.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="lib/css/wireframe.css" type="text/css" media="screen, projection">
-
-  <script type="text/javascript" charset="utf-8" src="lib/annotatr/lib/jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="lib/polypage/lib/cookie.jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="lib/polypage/lib/polypage.jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="lib/annotatr/lib/annotatr.jquery.js"></script>
-  <script type="text/javascript" charset="utf-8" src="lib/js/wireframe.js"></script>
+	<link rel="stylesheet" href="skins/annotatr.css" type="text/css" media="screen, projection">
+  <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/cookie.jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/annotatr.jquery.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $("body").annotatr();
+		});
+  </script>
+  
 </head>
 <body>
   <div id="page" class="annotatr" title="An annotation">
     <ul>
       <li class="annotatr" title="this is an &lt;strong&gt;annotation&lt;/strong&gt;">No <a href="#">Class</a></li>
-      <li class="annotatr test_class pp_logged_in" title="yet another annotation"><a href="http://www.google.com">pp_logged_in</a></li>
-      <li class="annotatr pp_not_logged_in other_test_class" title="An annotation">pp_not_logged_in</li>
-      <li class="annotatr test_class pp_logged_in_or_admin other_test_class" title="An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation.">pp_logged_in_or_admin</li>
-      <li class="annotatr pp_logged_in_and_admin" title="An annotation!">pp_logged_in_and_admin</li>
-      <li class="annotatr pp_not_logged_in_and_not_admin" title="test">pp_not_logged_in_and_not_admin</li>
+      <li class="annotatr test_class" title="yet another annotation"><a href="http://www.google.com">pp_logged_in</a></li>
+      <li class="annotatr other_test_class" title="An annotation">pp_not_logged_in</li>
+      <li class="annotatr test_class" title="An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation. An longer annotation.">pp_logged_in_or_admin</li>
+      <li class="annotatr" title="An annotation!">pp_logged_in_and_admin</li>
+      <li class="annotatr" title="test">pp_not_logged_in_and_not_admin</li>
     </ul>
   </div>
 </body>
