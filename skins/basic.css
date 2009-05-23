@@ -114,6 +114,9 @@
     padding: 0 1em;
     vertical-align: top;
   }
+  #annotatr_specification_pageinfo th  {
+    text-transform: uppercase !important;
+  }
 
 
 #annotatr_specification_table {
