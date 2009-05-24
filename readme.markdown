@@ -80,6 +80,8 @@ KNOWN ISSUES
 
 * Adding an annotation to an <a> tag doesn't work exactly right because the callout/annotation picks up the link behaviour/styling, meaning it'll likely be underlined and if you click it and it'll go where the link goes.
 
+* I haven't checked any of this in IE 6/7/8. I will likely be sad when I do.
+
 
 MORE INFO
 ---------
