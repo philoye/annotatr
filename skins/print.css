@@ -1,0 +1,61 @@
+.annotatr_callout {
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  z-index: 10000;
+  border: 1px solid #000;
+  font-size: 10pt;
+  padding: 2pt;
+  line-height: 1;
+  width: 15pt;
+  }
+
+  .annotatr_annotation {
+    position: absolute;
+  }
+  .annotatr_annotation .annotatr_text {
+    display: none;
+  }
+
+
+#annotatr_specification {
+  display: block;
+  margin-top: 50pt;
+  border-top: 2px solid #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 10pt;
+}
+#annotatr_specification #annotatr_header {
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  text-transform: uppercase;
+  padding: 5pt 0 20pt 0;
+  font-weight: bold;
+}
+#annotatr_specification_pageinfo {
+  position: static;
+  float: left;
+  width: 33%;
+}
+#annotatr_specification_pageinfo th, #annotatr_specification_pageinfo td {
+  text-align: left;
+  padding-right: 10pt;
+  vertical-align: top;
+}
+  #annotatr_specification_pageinfo th  {
+    font-weight: bold;
+  }
+#annotatr_specification_table {
+  position: static;
+}
+  #annotatr_specification_table .annotatr_callout {
+    position: static;
+    border: 0;
+    padding: 0;
+  }
+
+#annotatr_specification_table th, #annotatr_specification_table td {
+  padding-top:2pt;
+  vertical-align: top;
+  border-top: 1px solid #000;
+}
