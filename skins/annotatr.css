@@ -19,7 +19,7 @@
 .annotatr_callout_hidden .annotatr_callout {
   background-color: #777;
 }
-.notshown {
+.annotatr_notshown {
   color: #777;
   font-size: 10px;
 }
