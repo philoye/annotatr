@@ -68,15 +68,17 @@ Here's an example of calling Annotatr with several custom options:
 TIPS & TRICKS
 ----------
 
-* Few people seem to take advantage of it, but the <meta> tag can take any arbitrary key/value pairs. For example, you could use source control revision, last modified date, revision, a project status of some sort, etc. 
+* Few people seem to take advantage of it, but the meta tag can take any arbitrary key/value pairs. For example, you could use source control revision, last modified date, revision, a project status of some sort, etc. 
 
-* Title attributes *seem* to allow arbitrary HTML. I wouldn't go crazy, but you it seems that you can use bold, italic, br, etc., to style the annotation text.
+* Title attributes *seem* to allow arbitrary HTML. I wouldn't go crazy, but it seems that you can use bold, italic, br, etc., to style the annotation text.
 
 
 KNOWN ISSUES
 ----------
 
-* Given that we're inserting elements into your HTML it is extremely difficult to avoid CSS collision. All of Annotatr's styles are namespaced so that it is unlikely to affect your mockup, however, the reverse is not necessarily true. While, I've attempted to reset styles on each Annotatr elements, any global styles you write on html elements tables, divs, spans, links, lists, etc. might collide. The best way to avoid any issues is to namespace your css by using classes/ids, or simply edit annotatr css file to override.
+* Given that we're inserting elements into your HTML it is extremely difficult to avoid CSS collision. All of Annotatr's styles are namespaced so that it is unlikely to affect your mockup, however, the reverse is not necessarily true. While, I've attempted to reset styles on each Annotatr element, any global styles you write on html elements tables, divs, spans, links, lists, etc. might collide. The best way to avoid any issues is to namespace your css by using classes/ids, or simply edit annotatr css file to override.
+
+* Adding annotations to images is not supported at the moment, the annotation will silently disappear.
 
 * Adding an annotation to a link tag doesn't work exactly right because the callout/annotation picks up the link behaviour/styling, meaning it'll likely be underlined and if you click it and it'll go where the link goes.
 
