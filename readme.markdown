@@ -10,7 +10,7 @@ Annotatr is a jQuery plugin designed to help you document and explain your HTML 
 BASIC USAGE
 -----------
 
-Add Annotatr to your site by including the following css and scripts to the <head> of your document.
+Add Annotatr to your site by including the following css and scripts to the head of your document.
 
     <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/cookie.jquery.js"></script>
