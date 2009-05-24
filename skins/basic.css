@@ -1,8 +1,40 @@
+/* reset all elements */
+
+#annotatr_controls, 
+  #annotatr_controls p,
+  #annotatr_controls ul,
+  #annotatr_controls li,
+  #annotatr_controls li a,
+  #annotatr_controls li a.active,
+.annotatr_annotation,
+.annotatr_callout,
+.annotatr_text,
+.annotatr_notshown,
+#annotatr_specification,
+  #annotatr_specification th,
+  #annotatr_specification td,
+#annotatr_specification_table,
+  #annotatr_specification th,
+  #annotatr_specification td,
+.annotatr_callout
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  position: static;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  line-height: 1.5;
+  vertical-align: baseline;
+}
+
 #annotatr_controls {
   position: fixed;
   top: 0;
   right: 0;
-	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   background-color: #ddd;
   color: #666;
   padding: 5px;
@@ -11,29 +43,27 @@
 } 
   #annotatr_controls p {
     float: left;
-  	margin: 0;
-  	padding: 0;
-    margin: 0 5px 0 10px;
+    margin: 0 10px 0 10px;
     color: #999;
   }
   #annotatr_controls ul {
-  	margin: 0;
-  	padding: 0;
   	float: left;
   }
     #annotatr_controls li {
-    	display: inline;
-    	padding: 0 .3em;
+    	display: inline-block;
+      margin: 0 5px 0 0px;
     }
       #annotatr_controls li a {
-        padding: 1px 3px;
+        padding: 3px;
       	color: #000;
       	font-weight: bold;
       	outline: none;
       	text-decoration: none;
       }
         #annotatr_controls li a.active {
+          padding: 3px;
         	color: #fff;
+        	font-weight: bold;
         	background-color: #00aeef;
         	outline: none;
         }
@@ -47,7 +77,6 @@
 }
 
 .annotatr_callout {
-	font: 12px/1.5 normal "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -126,7 +155,6 @@
     text-transform: uppercase !important;
   }
 
-
 #annotatr_specification_table {
   float: left;
   width: 66%;
@@ -147,9 +175,10 @@
   #annotatr_specification_table .annotatr_callout {
     position: static;
   }
+
 .annotatr_hotspot {
   background-color: #ffcccc !important;
   background-color: rgba(255,0,0,.2) !important;
-  border: 1px solid red;
+  border: 1px solid red !important;
 }
 
