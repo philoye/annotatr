@@ -29,6 +29,7 @@
   font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   line-height: 1.5;
   vertical-align: baseline;
+  text-transform: none;
 }
 
 #annotatr_controls {
@@ -80,7 +81,7 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  padding: 1px 5px;
+  padding: 3px 5px;
   background-color: #00aeef;
   color: #fff;
   text-align: center;
@@ -125,6 +126,9 @@
   padding: 1em 0px;
   clear: both;
   margin: 50px 25px;
+  position: absolute;
+  top: -10000em;
+  left: -10000em;
 }
   #annotatr_specification:after {
       content: ".";
@@ -143,8 +147,14 @@
   }
 #annotatr_specification_pageinfo {
 	font: 12px/1.5 bold "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  float: left;
-  width: 33%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  padding: 5px 0;
+  background-color: #ddd;
+  border-top: 1px solid #bbb;
+  border-left: 1px solid #bbb;
 }
   #annotatr_specification_pageinfo th, #annotatr_specification_pageinfo td  {
     text-align: left;
@@ -152,7 +162,8 @@
     vertical-align: top;
   }
   #annotatr_specification_pageinfo th  {
-    text-transform: uppercase !important;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
 #annotatr_specification_table {
