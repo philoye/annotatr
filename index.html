@@ -96,21 +96,22 @@
   	<h2>What&#39;s this all about?</h2>
     <p>Annotatr was designed to help document and explain your mockups. The goal is to use simple and standard HTML markup while ensuring the documentation is <em>never</em> confused with the mockup itself.</p>
     
-    <p>Annotatr provides two distinct pieces of functionality—annotations for additional explanation for particular UI elements and it highlights the parts of the mockup that are actually clickable.<p>
+    <p>Annotatr provides two distinct pieces of functionality—it provides callouts for particular elements and it highlights the parts of the mockup that are actually clickable.<p>
       
     <h2>Why annotate our mockups?</h2>
-    <p>While we always strive to create completely usable, intuitive designs, there is always a need to provide extra explanation about the <em>what, how &amp; why</em> behind the design to the people involved.</p>
+    <p>While we always strive to create completely usable, intuitive designs, there is always a need to provide extra explanation about the <em>what, how &amp; why</em> behind the mockup to the people involved.</p>
 
-    <h2>Why callout clickable links?</h2>
-    <p>How many times have you emailed a link to a prototype along with instructions about what works? Well, hopefully no longer. For example, <a href="#">which</a> <a href="#">one</a> <a href="#">of</a> <a href="#">these</a> <a href="#">links</a> <a href="#">actually</a> <a href="http://youtube.com/watch?v=oHg5SJYRHA0/">works</a>?</p>
+    <p>For the links, how many times have you emailed a link to a prototype along with instructions about what works? Well, hopefully no longer. For example, <a href="#">which</a> <a href="#">one</a> <a href="#">of</a> <a href="#">these</a> <a href="#">links</a> <a href="#">actually</a> <a href="http://youtube.com/watch?v=oHg5SJYRHA0/">works</a>?</p>
       
     <h2>Where's the demo?</h2>
   	<p>This page is using Annotatr. Check out the options in the top right corner of this page, toggle them to see what happens.</p>
 
   	<h2>How does it work?</h2>
-    <p>Check out the readme for more details, but basically Annotatr creates callouts for every element that has a <code>title</code> attribute which you use for the annotation text.
+    <p>Check out the readme for more details, but basically, you simply add your notes to the <code>title</code> attribute on any HTML element. Annotatr will scan those title attributes and create the callouts. 
+      
+    <p>For the clickable items, it looks at all links that have an <code>href</code> that isn't blank or a <code>#</code>, and it adds a border and a background color. Perhaps in the future this will be extended to find forms with working actions and other items with an onclick event.</p>
 
-    <p>For the clickable items, it looks at all links that have an <code>href</code>, that isn't blank or a <code>#</code>, and adds a background color. This will be extended to find forms with working actions and items with an onclick event.</p>
+    <p>Annotatr uses cookies to save the state so that people can traverse several pages without having to toggle the controls each time.
 
   	<h2>Where can I get hold of it?</h2>
   	<p>The latest source code is available on <a href="http://github.com/philoye/annotatr" title="<strong>Git</strong> is a fast, efficient, distributed version control system ideal for the collaborative development of software.<br><br><strong>GitHub</strong> is the easiest (and prettiest) way to participate in that collaboration: fork projects, send pull requests, monitor development, all with ease.">GitHub</a> or you can just download it right <a href="http://github.com/philoye/annotatr/zipball/master">here</a>.</p>
