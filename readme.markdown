@@ -78,7 +78,7 @@ KNOWN ISSUES
 
 * Given that we're inserting elements into your HTML it is extremely difficult to avoid CSS collision. All of Annotatr's styles are namespaced so that it is unlikely to affect your mockup, however, the reverse is not necessarily true. While, I've attempted to reset styles on each Annotatr elements, any global styles you write on html elements tables, divs, spans, links, lists, etc. might collide. The best way to avoid any issues is to namespace your css by using classes/ids, or simply edit annotatr css file to override.
 
-* Adding an annotation to an <a> tag doesn't work exactly right because the callout/annotation picks up the link behaviour/styling, meaning it'll likely be underlined and if you click it and it'll go where the link goes.
+* Adding an annotation to a link tag doesn't work exactly right because the callout/annotation picks up the link behaviour/styling, meaning it'll likely be underlined and if you click it and it'll go where the link goes.
 
 * I haven't checked any of this in IE 6/7/8. I will likely be sad when I do.
 
