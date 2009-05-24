@@ -33,7 +33,7 @@
 }
 
 #annotatr_controls {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #ddd;
