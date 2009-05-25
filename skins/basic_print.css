@@ -24,11 +24,14 @@
 
 
 #annotatr_specification {
+  position: static;
   display: block;
   margin-top: 50pt;
   border-top: 2px solid #000;
   font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   font-size: 10pt;
+  top: auto;
+  left: auto;
 }
 #annotatr_specification #annotatr_header {
   font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;

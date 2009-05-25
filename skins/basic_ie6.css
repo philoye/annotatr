@@ -1,0 +1,21 @@
+#annotatr_controls {
+  position: absolute;
+}
+
+#annotatr_specification {
+  position: static;
+}
+#annotatr_specification #annotatr_header {
+  position: absolute;
+  left: 10000em;
+}
+#annotatr_specification_pageinfo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #bbb;
+}
+#annotatr_specification_table {
+  position: absolute;
+  left: 10000em;
+}

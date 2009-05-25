@@ -10,13 +10,19 @@
   <meta name="page" content="Home">
   <meta name="date" content="2009-05-23 11:57:20">
   <meta name="version" content="0.1">
-  <meta name="status" content="public beta">
+  <meta name="status" content="Public beta">
   <meta name="author" content="Phil Oye">
   <meta name="description" content="Annotatr is a jQuery plugin that provides a unobtrusive way to show documentation for HTML wireframes.">
   <meta name="keywords" content="jquery, plugin, ia, information architecture, wireframes, documentation, annotatr, annotations">
 
 	<link rel="stylesheet" href="skins/basic.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="skins/print.css" type="text/css" media="print">
+  <!--[if lte IE 7]>
+  	<link rel="stylesheet" href="skins/basic_ie7.css" type="text/css" media="screen, projection">
+  <![endif]-->
+  <!--[if lte IE 6]>
+  	<link rel="stylesheet" href="skins/basic_ie6.css" type="text/css" media="screen, projection">
+  <![endif]-->
+	<link rel="stylesheet" href="skins/basic_print.css" type="text/css" media="print">
   <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/cookie.jquery.js"></script>
   <script type="text/javascript" charset="utf-8" src="lib/annotatr.jquery.js"></script>

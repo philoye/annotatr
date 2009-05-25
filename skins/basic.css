@@ -51,8 +51,11 @@
   	float: left;
   }
     #annotatr_controls li {
-    	display: inline-block;
+      float: left;
+/*      display: inline-block;*/
       margin: 0 5px 0 0px;
+      list-style: none;
+
     }
       #annotatr_controls li a {
         padding: 3px;
@@ -120,9 +123,6 @@
 }
 
 #annotatr_specification {
-  border-top: 3px solid #ccc;
-  border-bottom: 3px solid #ccc;
-  background-color: #efefef;
   padding: 1em 0px;
   clear: both;
   margin: 50px 25px;
@@ -188,8 +188,7 @@
   }
 
 .annotatr_hotspot {
-  background-color: #ffcccc !important;
+  background-color: #ffcccc;
   background-color: rgba(255,0,0,.2) !important;
   border: 1px solid red !important;
 }
-
