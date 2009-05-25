@@ -12,11 +12,17 @@ BASIC USAGE
 
 Add Annotatr to your site by including the following css and scripts to the head of your document.
 
+    <link rel="stylesheet" href="skins/basic.css" type="text/css" media="screen, projection">
+    <!--[if lte IE 7]>
+    	<link rel="stylesheet" href="skins/basic_ie7.css" type="text/css" media="screen, projection">
+    <![endif]-->
+    <!--[if lte IE 6]>
+    	<link rel="stylesheet" href="skins/basic_ie6.css" type="text/css" media="screen, projection">
+    <![endif]-->
+    <link rel="stylesheet" href="skins/basic_print.css" type="text/css" media="print">
     <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/cookie.jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/annotatr.jquery.js"></script>
-    <link rel="stylesheet" href="skins/basic.css" type="text/css" media="screen, projection">
-    <link rel="stylesheet" href="skins/print.css" type="text/css" media="print">
 
 You invoke annotatr by calling the function on whichever element you would like the controls added.
 
@@ -48,7 +54,7 @@ This is a jQuery selector to target which items are used for the callouts. The d
     label_hotspots: "What's clickable?",
     label_notshown: "(Not shown in the current page state)",
 
-These four options customize the user interface labels and have no effect on the functionality. 'label_notshown' only appears on the print version for items that happen to be hidden. This is especially useful if you are using the PolyPage plugin to hide elements and want to avoid "orphaned" annotations.
+These four options customize the user interface labels and have no effect on the functionality. 'label_notshown' only appears on the print version for items that happen to be hidden. This is especially useful if you are using the PolyPage plugin to hide elements and want to avoid "orphaned" annotations (more on PolyPage later).
     
     ignore_hotspots_selector: "#pp_options a"
 
@@ -88,10 +94,79 @@ MORE INFO
 For an example open the index.html file in a web browser.
 
 
+USING ANNOTATR WITH POLYPAGE
+------------
+
+[PolyPage](http://github.com/andykent/polypage/tree/master) is a jQuery plugin that "ease[s] the process of showing multiple page states in HTML mockups." I approached Annotatr such that it can co-exist with PolyPage without any conflicts. 
+
+  * Annotatr comes bundled with the standard [jQuery Cookie plugin](http://plugins.jquery.com/project/Cookie). PolyPage on the other hand comes with a customized version, but Annotatr can use either. But just use one, ok?
+
+  * Annotatr outputs all the annotations when the page is printed with Notes turned on. One nicety is that if an annotated element is not shown for whatever reason (say, if PolyPage hid it), a note is added that the item in question is not shown in the current page state.
+  
+    To ensure you take advantage of this, you'll need to call PolyPage such that it calls a refresh function in Annotatr each time you update the PolyPage state. Fortunately, it is easier than it sounds, just do this:
+  
+        <script type="text/javascript" charset="utf-8">
+          $(document).ready(function() {
+              $('body').bind('pp_stateChange', function(e, state) { 
+                $.annotatr.refreshSpecification();
+              });
+            });
+        </script>
+
+  * Make sure you call set the ignore_hotspots_selector to include the PolyPage options links to prevent the state links from getting highlighted when using the "What clickable?" feature:
+  
+        ignore_hotspots_selector: "#pp_options a"
+
+
+USING ANNOTATR WITH STATES.JS
+------------
+
+[States.js](http://github.com/toolmantim/states.js/tree/master) is a "A simple way of capturing and communicating different states in html+js mockups." In case you are interested in using Annotatr with this other awesome plugin, a few things to keep in mind:
+
+1. Both plugins use the `title` attribute, so you'll need to ensure you don't create an annotation on the same element that defines a state. The easy workaround is to simply create another wrapping div, like so:
+  
+        <div class="state" title="Logged in">
+          <ul title="This list of links is populated by... ">
+            ...
+
+2.  Annotatr in its default configuration will create annotations for every element that has a title tag, which in the above case would create an annotation with the text "Logged in". However, there is a option to call Annotatr with a custom selector.
+  
+    You could restrict Annotatr to only look titles with a particular class:
+  
+        <div class="state" title="Logged in">
+          <ul class="annotation" title="This list of links is populated by... ">
+            ...
+
+    So you would call Annotatr like this:
+  
+        <script type="text/javascript" charset="utf-8">
+          $(document).ready(function() {
+            $("body").annotatr( { annotation_selector: ".annotation[title]" } )
+      		});
+        </script>
+  
+    Which would target only items with class "annotation" and a title tag. Altneratively, you could just ignore any item with class "state":
+  
+        <script type="text/javascript" charset="utf-8">
+          $(document).ready(function() {
+            $("body").annotatr( { annotation_selector: "[title]:not(.state)" } )
+      		});
+        </script>
+  
+3.  Unfortunately, States.js doesn't currently have the ability to fire a custom event when the state changes, so if you the print, the annotations table won't note which elements are hidden.
+  
+  
+4.  Make sure you call set the ignore_hotspots_selector to include the States selector to prevent the state links from getting highlighted when using the "What clickable?" feature:
+
+        ignore_hotspots_selector: "#state-selector a"
+
+5.  You'll want to update the skin included with Annotatr so that all the controls are visible. A future release will include a skin that does this for you.
+
+  
 ACKNOWLEDGEMENTS
 ------------
 
-I was inspired to create Annotatr after seeing New Bamboo's PolyPage, a jQuery plugin that "ease[s] the process of showing multiple page states in HTML mockups." I borrowed a lot of ideas for how to structure Annotatr, and for that I owe  thanks.
+As alluded to above, I was inspired to create Annotatr after seeing New Bamboo's [PolyPage](http://github.com/andykent/polypage/tree/master). I borrowed a lot of ideas for how to structure Annotatr from a early version of PolyPage, and for that I owe  thanks.
 
 
 WHAT'S NEXT?
