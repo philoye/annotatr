@@ -13,12 +13,6 @@ BASIC USAGE
 Add Annotatr to your site by including the following css and scripts to the head of your document.
 
     <link rel="stylesheet" href="skins/basic.css" type="text/css" media="screen, projection">
-    <!--[if lte IE 7]>
-    	<link rel="stylesheet" href="skins/basic_ie7.css" type="text/css" media="screen, projection">
-    <![endif]-->
-    <!--[if lte IE 6]>
-    	<link rel="stylesheet" href="skins/basic_ie6.css" type="text/css" media="screen, projection">
-    <![endif]-->
     <link rel="stylesheet" href="skins/basic_print.css" type="text/css" media="print">
     <script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/cookie.jquery.js"></script>
@@ -34,7 +28,12 @@ You invoke annotatr by calling the function on whichever element you would like 
 
 This appends the annotatr controls to the body element. If you pass in a collection, the controls will simply be added to the first item only.
 
-To actually create annotations, simple add title attributes to the elements you want annotated.
+To create the annotations, simply add a title attribute with the text you want to any HTML elements. For example:
+
+    <p title="Neither is there anyone who loves grief itself since it is grief and thus wants to obtain it">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+This will add a callout on the paragraph which reveals the annotation on rollover.
+
 
 ADVANCED USAGE
 --------------
@@ -43,7 +42,7 @@ There are quite a few options you can pass in to Annotatr to customize its displ
 
     metadata_ignore: ["viewport","keywords"]
 
-This is an array of <meta> tags that are ignored when creating the page summary box. By default we're ignoring keywords and the viewport directive. Any others will be displayed.
+This is an array of meta tags that are ignored when creating the page summary box. By default we're ignoring keywords and the viewport directive. Any others will be displayed.
   
     annotation_selector: "[title]"
 
@@ -69,6 +68,15 @@ Here's an example of calling Annotatr with several custom options:
           );
     	});
     </script>
+
+If you'd like to support IE6/7 with the included basic skin, add these conditional comments to the head of your document.
+
+    <!--[if lte IE 7]>
+    	<link rel="stylesheet" href="skins/basic_ie7.css" type="text/css" media="screen, projection">
+    <![endif]-->
+    <!--[if lte IE 6]>
+    	<link rel="stylesheet" href="skins/basic_ie6.css" type="text/css" media="screen, projection">
+    <![endif]-->
 
 
 TIPS & TRICKS
@@ -145,7 +153,7 @@ USING ANNOTATR WITH STATES.JS
       		});
         </script>
   
-    Which would target only items with class "annotation" and a title tag. Altneratively, you could just ignore any item with class "state":
+    Which would target only items with class "annotation" and a title tag. Alternatively, you could just ignore any item with class "state":
   
         <script type="text/javascript" charset="utf-8">
           $(document).ready(function() {
@@ -153,10 +161,9 @@ USING ANNOTATR WITH STATES.JS
       		});
         </script>
   
-3.  Unfortunately, States.js doesn't currently have the ability to fire a custom event when the state changes, so if you the print, the annotations table won't note which elements are hidden.
+3.  Unfortunately, States.js doesn't currently have the ability to fire a custom event when the state changes, so if you print, the annotations table won't note which elements are hidden.
   
-  
-4.  Make sure you call set the ignore_hotspots_selector to include the States selector to prevent the state links from getting highlighted when using the "What clickable?" feature:
+4.  Make sure you call set the ignore\_hotspots\_selector to include the States selector to prevent the state links from getting highlighted when using the "What clickable?" feature:
 
         ignore_hotspots_selector: "#state-selector a"
 
@@ -166,7 +173,7 @@ USING ANNOTATR WITH STATES.JS
 ACKNOWLEDGEMENTS
 ------------
 
-As alluded to above, I was inspired to create Annotatr after seeing New Bamboo's [PolyPage](http://github.com/andykent/polypage/tree/master). I borrowed a lot of ideas for how to structure Annotatr from a early version of PolyPage, and for that I owe  thanks.
+As alluded to above, I was inspired to create Annotatr after seeing New Bamboo's [PolyPage](http://github.com/andykent/polypage/tree/master). I borrowed a lot of ideas for how to structure Annotatr from a early version of PolyPage, and for that I owe thanks.
 
 
 WHAT'S NEXT?
